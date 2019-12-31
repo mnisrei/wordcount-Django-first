@@ -1,0 +1,12 @@
+<h1>We Have {{Words}} Total Words</h1>
+<h2>Your Text Is:</h2>
+<h3>{{usertext}}</h3>
+<h1>This is Counting: </h1>
+<!-- This will Show in terms of dictionary Like {Hello: 3, World : 1}
+{{ wordDic }}
+-->
+{% for word, counts in wordDic%}
+{{word}} ==> {{counts}}
+{%endfor%}
+
+<a href="{% url 'homepage' %}"><h2>Want to Count Again?</h2></a>
